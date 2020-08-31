@@ -1,35 +1,39 @@
 {
-  "manifest": {
-    "publishingInformation": {
-      "locales": {
-        "en-US": {
-          "summary": "Sample Short Description",
-          "examplePhrases": [
-            "Alexa open hello world",
-            "Alexa tell hello world hello",
-            "Alexa ask hello world say hello"
-          ],
-          "name": "Office Hours Skill",
-          "description": "Sample Full Description"
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "say welcome message",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "HelloWorldIntent",
+                    "slots": [],
+                    "samples": [
+                        "hello",
+                        "how are you",
+                        "say hi world",
+                        "say hi",
+                        "hi",
+                        "say hello world",
+                        "say hello"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                }
+            ],
+            "types": []
         }
-      },
-      "isAvailableWorldwide": true,
-      "testingInstructions": "Sample Testing Instructions.",
-      "category": "EDUCATION_AND_REFERENCE",
-      "distributionCountries": []
-    },
-    "apis": {
-      "custom": {
-        "endpoint": {
-          "sourceDir": "lambda/custom"
-        },
-        "interfaces": [
-          {
-            "type": "ALEXA_PRESENTATION_APL"
-          }
-        ]
-      }
-    },
-    "manifestVersion": "1.0"
-  }
+    }
 }
